@@ -1,14 +1,16 @@
 // Assignment Code
+// created variables & used .split to to strings into arrays
 var generateBtn = document.querySelector("#generate");
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('');
 console.log(upperCase)
 var lowerCase = "abcdefghijklmnopqrstuvwxyz".split('');
 var numbers = "0123456789".split('');
 var special = "!@#$%^&*()_-+={}[];:'`~<,>.?/|".split('');
-
+// made functions to give options for password selections
 function getOptions(){
   let len = parseInt(prompt('Select a number from 8-128'));
  // console.log(len)
+ // used if statments to send promtps/alerts 
  if (isNaN(len) === true) {
     alert('Password length must be  a number');
     return;
@@ -48,6 +50,7 @@ function generatePassword(){
   let password = []
   let possible = []
   let chosen = []
+  // used if statements to to generate/pick random charcters for password
   if (options.isUpperCase){
    possible = possible.concat(upperCase)
    let getRandom = random(upperCase)
